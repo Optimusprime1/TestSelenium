@@ -55,6 +55,7 @@ public static void LoginIE(){
 	WebDriver driver = new InternetExplorerDriver();	
 		
 	driver.get("https://crmdevinternal.bupa.com.sa/BupaSIT/main.aspx#282802707");
+
 	int ExecReturn = IeloginWithBat();
 	if (ExecReturn==0){try {
 		Thread.sleep(7500);
@@ -70,10 +71,16 @@ public static void LoginIE(){
 	driver.findElement(By.id("butBegin")).click(); 
 	//driver.manage().window().fullscreen();
 	driver.switchTo().defaultContent();
+	
+	/*
 	driver.findElement(By.id("homeButtonImage")).click();
 	driver.findElement(By.id("SFA")).click();
 	driver.findElement(By.id("nav_leads")).click();
-	driver.findElement(By.id("lead|NoRelationship|HomePageGrid|Mscrm.HomepageGrid.lead.NewRecord")).click();
+	//driver.findElement(By.className("ms-crm-CommandBar-Menu")).click();
+	*/
+	driver.get("https://crmdevinternal.bupa.com.sa/BupaSIT/main.aspx?etn=lead&id=&pagetype=entityrecord");
+	//https://crmdevinternal.bupa.com.sa/BupaSIT/main.aspx?etn=lead&id=&pagetype=entityrecord
+	
 	
 	
 	
