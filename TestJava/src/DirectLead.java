@@ -109,11 +109,12 @@ public static void Chrome(WebDriver driver){
 driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 	waitForLoad(driver);
 WebElement CheckElement = driver.findElement(By.id("contentIFrame0"));
-driver.switchTo().frame(CheckElement);
-WebElement Newframe = driver.findElement(By.id("campaignid_d"));
-System.out.println(Newframe.getTagName());
-	
-	
+		if (CheckElement!= null)
+					{
+					driver.switchTo().frame(CheckElement) ;
+					WebElement Newframe = driver.findElement(By.id("campaignid_d"));
+					System.out.println(Newframe.getTagName());
+					}
 	
 	/*
 	 System.out.println("i am here1");
