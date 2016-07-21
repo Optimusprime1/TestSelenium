@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.*;
@@ -115,16 +117,16 @@ WebElement CheckElement = driver.findElement(By.id("contentIFrame0"));
 					WebElement Newframe = driver.findElement(By.id("campaignid_d"));
 					System.out.println(Newframe.getTagName());
 					}
-	
-	/*
+		
 	 System.out.println("i am here1");
-	List<WebElement> resultList = driver.findElements(By.id("bupa_lead_expectedaveragepremium"));
+	 
+	List<WebElement> resultList = driver.findElements(By.className("ms-crm-InlineEditLabel"));
 	for (WebElement resultItem : resultList){
         String tabname=resultItem.getTagName();
         System.out.println("i am here2");
         System.out.println(tabname);}
         
-        */
+    
 }
 
 
