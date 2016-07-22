@@ -115,17 +115,39 @@ WebElement CheckElement = driver.findElement(By.id("contentIFrame0"));
 					{
 					driver.switchTo().frame(CheckElement) ;
 					WebElement Newframe = driver.findElement(By.id("campaignid_d"));
-					System.out.println(Newframe.getTagName());
+					//System.out.println(Newframe.getTagName());
+					System.out.println("i am here1");
+					/*
+					
+					if (driver instanceof JavascriptExecutor) {
+					    ((JavascriptExecutor)driver).executeScript("alert(document.getElementById(\"bupa_name_i\"))");}
+					    
+					 else {
+					    throw new IllegalStateException("This driver does not support JavaScript!");
+					}
+					
+					}
+					
+					List<WebElement> resultList = driver.findElements(By.cssSelector("div.ms-crm-Inline-Chrome.nvarchar"));
+					for (WebElement resultItem : resultList){
+				        String tabname=resultItem.getTagName();
+				        System.out.println(tabname);}
+					//driver.close();
+					*/
+		
+		
+	  WebElement NumberOfLives = driver.findElement(By.xpath("//div[contains(@style,'display: none')].//*[@id='bupa_name']/div[1]/span"));
+	
+	//div[contains(@style,'display: none')]//button[.='OK']
+	  
+		//WebElement NumberOfLives = driver.findElement(By.id("campaignid_d"));				
+					
+		
+		
 					}
 		
-	 System.out.println("i am here1");
-	 
-	List<WebElement> resultList = driver.findElements(By.className("ms-crm-InlineEditLabel"));
-	for (WebElement resultItem : resultList){
-        String tabname=resultItem.getTagName();
-        System.out.println("i am here2");
-        System.out.println(tabname);}
-        
+		
+		
     
 }
 
